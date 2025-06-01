@@ -4,7 +4,7 @@ import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: "/", // تأكد من أن Vite يستخدم المسار الجذر
+  base: "./", // تأكد من أن Vite يستخدم المسار الجذر
   server: {
     host: "::",
     port: 8080,
@@ -13,6 +13,7 @@ export default defineConfig(({ mode }) => ({
   build: {
     outDir: "dist", // تحديد مجلد الإخراج
     sourcemap: true, // تحسين التصحيح
+    assetsDir: 'assets'
   },
   plugins: [
     react(),
